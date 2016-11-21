@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stack</title>
+</head>
+<body>
+<script>
+  var stack =  function() {
+        var items = [];
+        this.push = function (element) {
+            items.push(element);
+        };
+        this.pop = function () {
+            return items.pop();
+        };
+        this.peek = function () {
+//            return items.lastChild;
+            return items[items.length-1];
+        };
+        this.isEmpty = function () {
+            return items.length == 0;
+        };
+        this.size = function () {
+            return items.length;
+        };
+        this.clear = function () {
+            items = [];
+        };
+        this.print = function () {
+            console.log(items.toString());
+        };
+        this.toString = function () {
+            return items.toString();
+        };
+    }
+  var newStack = new stack();
+    newStack.push(1);
+    newStack.push(2);
+    console.log('size',newStack.size());
+    newStack.print();
+</script>
+</body>
+</html>
