@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>队列</title>
+</head>
+<body>
+<script>
+    function Queue() {
+        var items = [];
+        //插入元素,从右边开始插入,也就是队尾
+        this.enqueue = function (element) {
+            items.push(element);
+        }
+        //移除数组中的左边第一个元素,也就是队首
+        this.dequeue = function () {
+            return items.shift();
+        }
+        //返回队列中的第一个元素
+        this.front = function () {
+            return items[0];
+        }
+        //判断是否为空,并返回结果
+        this.isEmpty = function () {
+            return items.length == 0;
+        }
+        //清除队列
+        this.clear = function () {
+            return items = [];
+        }
+        //获取队列的长度
+        this.size = function () {
+            return items.length;
+        }
+        //输出队列的内容
+        this.print = function () {
+            console.log(items.toString());
+        }
+    }
+</script>
+</body>
+</html>
